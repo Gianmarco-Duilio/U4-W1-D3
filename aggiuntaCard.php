@@ -16,19 +16,17 @@ $options = [
 $pdo = new PDO($dsn, $user, $pass, $options);
 
 
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $nome = $_POST['nome'];
+    $prezzo = $_POST['prezzo'];
+    $immagine = $_POST['immagine'];
 
-$nome = $_POST['nome'];
-$prezzo = $_POST['prezzo'];
-$immagine = $_POST['immagine'];
 
-
-$stmt = $pdo->query('SELECT * FROM shoesshop');
-
-$stmt = $pdo->prepare("INSERT INTO shoesshop (immagine, nome, prezzo) VALUES (:immagine, :nome, :prezzo)");
-$stmt->execute([
-    'immagine' => $immagine,
-    'nome' => $nome,
-    'prezzo' => $prezzo,
-]);
-
-header('Locatio:Corso Epicode-Ifoa Back End\U4-W1-D3\index.php');
+    $stmt = $pdo->prepare("INSERT INTO shoesshop (immagine, nome, prezzo) VALUES (:immagine, :nome, :prezzo)");
+    $stmt->execute([
+        ':immagine' => $immagine,
+        ':nome' => $nome,
+        ':prezzo' => $prezzo,
+    ]);
+}
+header('Location:index.php');
