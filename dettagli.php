@@ -53,7 +53,7 @@ $row = $stmt->fetch(PDO::FETCH_ASSOC);
                         <h5 class='card-title'>$row[nome]</h5>
                         <p class='card-text'>$row[prezzo]$</p>
                         <div class='row'>
-                           <div class='col-2'> <a href='#' class='btn btn-success'>modifica</a></div>
+                           <div class='col-2'> <a href='http://localhost/Corso%20Epicode-Ifoa%20Back%20End/U4-W1-D3/modifica.php/?id=$row[id]' class='btn btn-success'>modifica</a></div>
                          </div>
                       </div>  
                       </div> ";

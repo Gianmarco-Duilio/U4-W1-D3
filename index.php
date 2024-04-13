@@ -79,9 +79,11 @@ $stmt = $pdo->query('SELECT * FROM shoesshop');
                        <div class='card-body'>
                         <h5 class='card-title'>$res[nome]</h5>
                         <p class='card-text'>$res[prezzo]$</p>
-                        
-                             <a href='http://localhost/Corso%20Epicode-Ifoa%20Back%20End/U4-W1-D3/dettagli.php/?id=$res[id]' class='btn btn-primary'>dettagli</a>
-                             <a href='elimina.php?id=$res[id]'  class='btn btn-danger'>elimina</a>
+                         <div class='row justify-content-center'>
+                             <div class='col-2'><a href='http://localhost/Corso%20Epicode-Ifoa%20Back%20End/U4-W1-D3/dettagli.php?id=$res[id]' class='btn btn-primary'>dettagli</a></div>
+                             <div class='col-2'>  <a href='elimina.php?id=$res[id]'  class='btn btn-danger'>elimina</a></div>
+                             <div class='col-2'> <a href='http://localhost/Corso%20Epicode-Ifoa%20Back%20End/U4-W1-D3/modifica.php?id=$res[id]' class='btn btn-success'>modifica</a></div>
+                           </div>
                        
                       </div>  
                       </div>    
