@@ -48,7 +48,7 @@ include_once __DIR__  . "\includes\index-top.php"; ?>
 
 
     <?php
-    $limit = 2;
+    $limit = 4;
     $query = "SELECT count(*) FROM shoesshop";
 
     $s = $pdo->query($query);
@@ -74,16 +74,16 @@ include_once __DIR__  . "\includes\index-top.php"; ?>
 
 
       echo "
-      <div class='col'>
-      <div class='my-3 g-3 card bg-dark-subtle border-0 shadow-lg  mb-5 bg-body-tertiary' >
+      <div class='col-lg-6 col-xl-3'>
+      <div class='my-3  card bg-dark-subtle border-0 shadow-lg  mb-5 bg-body-tertiary' >
                     <img src=$res[immagine] class='p-3 card-img-top'>
                        <div class='card-body'>
                         <h5 class='card-title'>$res[nome]</h5>
                         <p class='card-text'>$res[prezzo]$</p>
-                         <div class='row justify-content-center'>
-                             <div class='col-2'><a href='http://localhost/Corso%20Epicode-Ifoa%20Back%20End/U4-W1-D3/dettagli.php?id=$res[id]' class='btn btn-primary'>dettagli</a></div>
-                             <div class='col-2'>  <a href='elimina.php?id=$res[id]'  class='btn btn-danger'>elimina</a></div>
-                             <div class='col-2'> <a href='http://localhost/Corso%20Epicode-Ifoa%20Back%20End/U4-W1-D3/modifica.php?id=$res[id]' class='btn btn-success'>modifica</a></div>
+                         <div class='d-flex'>
+                             <div class='col'><a href='http://localhost/Corso%20Epicode-Ifoa%20Back%20End/U4-W1-D3/dettagli.php?id=$res[id]' class='btn btn-primary'>dettagli</a></div>
+                             <div class='col'>  <a href='elimina.php?id=$res[id]'  class='btn btn-danger'>elimina</a></div>
+                             <div class='col'> <a href='http://localhost/Corso%20Epicode-Ifoa%20Back%20End/U4-W1-D3/modifica.php?id=$res[id]' class='btn btn-success'>modifica</a></div>
                            </div>
                        
                       </div>  
